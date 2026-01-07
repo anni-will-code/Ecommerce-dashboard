@@ -87,7 +87,15 @@ export default function SalesChart({ data }: SalesChartProps) {
                 <CartesianGrid strokeDasharray="3 3" stroke="#334155" />
                 <XAxis dataKey="month" stroke="#cbd5e1" />
                 <YAxis stroke="#cbd5e1" />
-                <Tooltip formatter={(value) => `$${value ?? 0}`} contentStyle={{ backgroundColor: '#1e293b', border: '1px solid #475569', borderRadius: '8px' }} textStyle={{ color: '#f1f5f9' }} />
+                <Tooltip 
+                  formatter={(value: any) => [`$${value}`, 'Revenue']}
+                  contentStyle={{ 
+                    backgroundColor: '#0f172a', 
+                    border: '1px solid #818cf8',
+                    borderRadius: '8px'
+                  }} 
+                  textStyle={{ color: '#f1f5f9' }}
+                />
                 <Legend wrapperStyle={{ color: '#cbd5e1' }} />
                 <Line type="monotone" dataKey="sales" stroke="#818cf8" strokeWidth={2} name="Revenue" />
               </LineChart>
@@ -108,7 +116,15 @@ export default function SalesChart({ data }: SalesChartProps) {
                 <CartesianGrid strokeDasharray="3 3" stroke="#334155" />
                 <XAxis dataKey="month" stroke="#cbd5e1" />
                 <YAxis stroke="#cbd5e1" />
-                <Tooltip contentStyle={{ backgroundColor: '#1e293b', border: '1px solid #475569', borderRadius: '8px' }} textStyle={{ color: '#f1f5f9' }} />
+                <Tooltip 
+                  formatter={(value: any) => [value, 'Orders']}
+                  contentStyle={{ 
+                    backgroundColor: '#0f172a', 
+                    border: '1px solid #10b981',
+                    borderRadius: '8px'
+                  }} 
+                  textStyle={{ color: '#f1f5f9' }}
+                />
                 <Legend wrapperStyle={{ color: '#cbd5e1' }} />
                 <Bar dataKey="orders" fill="#10b981" name="Orders" />
               </BarChart>
