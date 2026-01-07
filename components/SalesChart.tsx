@@ -92,9 +92,9 @@ export default function SalesChart({ data }: SalesChartProps) {
                   contentStyle={{ 
                     backgroundColor: '#0f172a', 
                     border: '1px solid #818cf8',
-                    borderRadius: '8px'
-                  }} 
-                  textStyle={{ color: '#f1f5f9' }}
+                    borderRadius: '8px',
+                    color: '#f1f5f9'
+                  }}
                 />
                 <Legend wrapperStyle={{ color: '#cbd5e1' }} />
                 <Line type="monotone" dataKey="sales" stroke="#818cf8" strokeWidth={2} name="Revenue" />
@@ -121,9 +121,9 @@ export default function SalesChart({ data }: SalesChartProps) {
                   contentStyle={{ 
                     backgroundColor: '#0f172a', 
                     border: '1px solid #10b981',
-                    borderRadius: '8px'
-                  }} 
-                  textStyle={{ color: '#f1f5f9' }}
+                    borderRadius: '8px',
+                    color: '#f1f5f9'
+                  }}
                 />
                 <Legend wrapperStyle={{ color: '#cbd5e1' }} />
                 <Bar dataKey="orders" fill="#10b981" name="Orders" />
